@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1271e452-3706-4b3c-95c1-ed1a7772e50d" name="Changes" comment="Create startGame() function module, which starts the game with two different outcomes">
-      <change beforePath="$PROJECT_DIR$/text-based-adventure-game" beforeDir="false" afterPath="$PROJECT_DIR$/text-based-adventure-game" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text-based-adventure-game/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/text-based-adventure-game/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="1271e452-3706-4b3c-95c1-ed1a7772e50d" name="Changes" comment="Add information" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +63,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712824051222</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add information">
+      <option name="closed" value="true" />
+      <created>1712826699210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712826699210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,6 +88,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create startGame() function module which starts the game with two different outcomes" />
     <MESSAGE value="Create startGame() function module, which starts the game with two different outcomes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create startGame() function module, which starts the game with two different outcomes" />
+    <MESSAGE value="Add information" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add information" />
   </component>
 </project>
