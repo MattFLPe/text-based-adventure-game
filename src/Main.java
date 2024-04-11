@@ -48,5 +48,6 @@ public class Main {
         System.out.println("You come to the conclusion that an adventure is not worth the risk and return home.");
         System.out.println(); System.out.println();
         System.out.println("Game over!");
+
     }
 }
