@@ -6,11 +6,13 @@ public class Main {
     public static int score = 0;
 
     public static void main(String[] args) {
-    System.out.println("Welcome to the text adventure game!");
-    System.out.println(); System.out.println();
+        System.out.println("Welcome to the text adventure game!");
+        System.out.println();
+        System.out.println();
         startGame();
         //clear();
     }
+
     /*
     public static void confir()
     {
@@ -65,7 +67,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int choice = scanner.nextInt();
-        System.out.println(); System.out.println();
+        System.out.println();
+        System.out.println();
 
         if (choice == 1) {
             int random = exploreRandom();
@@ -88,11 +91,19 @@ public class Main {
         } else {
             System.out.println("Invalid choice. Game over!");
         }
+
+        //clear();
+        scanner.close();
     }
+
     public static void returnHome() {
         System.out.println("You come to the conclusion that an adventure is not worth the risk and return home.");
-        System.out.println(); System.out.println();
+        System.out.println();
+        System.out.println();
         System.out.println("Game over!");
+        pause();
+        clear();
+        confir();
     }
 
     public static void insideBunker() {
@@ -106,15 +117,30 @@ public class Main {
         System.out.println();
 
         if (choice == 1) {
-        System.out.println("You exit the bunker hastily, but end up getting surprised by a corpse.");
-        System.out.println("Luckily, you have a newly acquired .357 Magnum loaded with a bullet.");
-        System.out.println("You slay the beast with a clear shot through it's head!");
-        score = score + 50;
-        System.out.println("Your score: " + score);
-        System.out.println("You walk down a dirt road and find an abandoned house.");
-        System.out.println("After a lengthy scan, you discover that there is no threat in the house. You're safe for now.");
-        pause();
-        clear();
-        confir();
+            System.out.println("You exit the bunker hastily, but end up getting surprised by a corpse.");
+            System.out.println("Luckily, you have a newly acquired .357 Magnum loaded with a bullet.");
+            System.out.println("You slay the beast with a clear shot through it's head!");
+            score = score + 50;
+            System.out.println("Your score: " + score);
+            System.out.println("You walk down a dirt road and find an abandoned house.");
+            System.out.println("After a lengthy scan, you discover that there is no threat in the house. You're safe for now.");
+            pause();
+            clear();
+            confir();
+        } else if (choice == 2) {
+            System.out.println("You decide to look for supplies down there.");
+            System.out.println("Unfortunately, it seems like the place was already ransacked.");
+            System.out.println("A corpse jumps from a metal cabinet behind you and bites your neck.");
+            System.out.println("Just like that, you perish.");
+            System.out.println("Your score: " + score);
+            pause();
+            clear();
+            confir();
+        } else {
+            System.out.println("Invalid choice. Game over!");
         }
+
+        //clear();
+        scanner.close();
+    }
 }
