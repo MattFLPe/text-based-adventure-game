@@ -1,2 +1,2 @@
 # text-based-adventure-game
-A text-based adventure game where you can play on the terminal. The game is choice based.
+A text-based adventure game which you can play on the terminal. The game is based on two different choices, each choice representing a different outcome.
