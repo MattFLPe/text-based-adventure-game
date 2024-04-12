@@ -73,7 +73,7 @@ public class Main {
             int random = exploreRandom();
             if (random == 0) {
                 System.out.println("You enter the bunker and a rotting creature bites your neck.");
-                System.out.println("You die on the spot from bloodloss.");
+                System.out.println("You die on the spot from bloodloss and infection.");
                 System.out.println("Your score: " + score);
                 System.out.println("Thanks for playing!");
                 pause();
@@ -148,13 +148,12 @@ public class Main {
         } else {
             System.out.println("Invalid choice. Game over!");
         }
-
         scanner.close();
     }
 
     public static void insideHouse() {
         System.out.println("1. Use your barefists. It's just a rotting corpse after all...");
-        System.out.println("2. ");
+        System.out.println("2. Run to the kitchen!");
         System.out.print("Enter Your Choice: ");
 
         Scanner scanner = new Scanner(System.in);
@@ -162,9 +161,42 @@ public class Main {
         int choice = scanner.nextInt();
         System.out.println();
 
-        if (choice == 1){
-
+        if (choice == 1) {
+            int random = fightCorpseRandom();
+            if (random == 0) {
+                System.out.println("You start well. The creature takes two punches to the face, but that's not enough.");
+                System.out.println("The beast plunges at you and sink their teeth deep into your flesh.");
+                System.out.println("Your screams are muffled while you are eaten alive.");
+                System.out.println("Your score: " + score);
+                System.out.println("Thanks for playing!");
+                pause();
+                startMenu();
+            } else {
+                System.out.println("You're able to overpower the creature, pushing it to the ground.");
+                System.out.println("You pick up the heaviest object from the living room and drop it on the beast's head.");
+                System.out.println("You killed it! And it looks likes the house is clean. You're safe for now...");
+                score = score + 100;
+                System.out.println("Your score: " + score);
+                System.out.println("Thanks for playing!");
+                pause();
+                startMenu();
+            }
+        } else if (choice == 2) {
+            System.out.println("You run! Like your life depended on it (It literally does!).");
+            System.out.println("The beast tries to follow you, but ends up tripping over and falling.");
+            System.out.println("As anticlimactically as it looks, you simply take a knife from the kitchen and stab the fallen beast.");
+            score = score + 100;
+            System.out.println("Your score: " + score);
+            System.out.println("Thanks for playing!");
+            pause();
+            startMenu();
         }
+        scanner.close();
+    }
+    public static int fightCorpseRandom() {
+        Random rand = new Random();
+        int ran = rand.nextInt(2);
+        return ran;
     }
     public static void pause() {
         Scanner s = new Scanner(System.in);
