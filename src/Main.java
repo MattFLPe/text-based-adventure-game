@@ -8,14 +8,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the text adventure game!");
         System.out.println();
-        System.out.println();
         startGame();
-        //clear();
+        clear();
     }
 
-    /*
-    public static void confir()
-    {
+
+    public static void startMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1. Start The Game");
         System.out.println("2. End The Game");
@@ -23,17 +21,18 @@ public class Main {
 
         int choice = scanner.nextInt();
 
-        if(choice == 1) {
+        if (choice == 1) {
             startGame();
         } else {
-            System.out.println();
             System.out.println("Game Over!");
-            System.out.println("Your Health: "+ health);
-            System.out.println("Your Score: "+ score);
+            System.out.println("Your Health: " + health);
+            System.out.println("Your Score: " + score);
+            System.out.println();
+            System.out.println("Thanks for playing!");
         }
         pause();
         clear();
-        */
+    }
     private static void startGame() {
         Scanner scanner = new Scanner(System.in);
 
@@ -76,7 +75,9 @@ public class Main {
                 System.out.println("You enter the bunker and a rotting creature bites your neck.");
                 System.out.println("You die on the spot from bloodloss.");
                 System.out.println("Your score: " + score);
+                System.out.println("Thanks for playing!");
                 pause();
+                startMenu();
             } else {
                 System.out.println("You enter the bunker and find a revolver with one remaining bullet.");
                 score = score + 50;
@@ -86,24 +87,30 @@ public class Main {
             }
         } else if (choice == 2) {
             System.out.println("You ignore the bunker and keep walking.");
-            System.out.println("Soon enough you get surrounded by rotting monsters, but luckily you find a house");
-            System.out.println("Turns out the house isn't so safe. A corpse surprises you!");
+            System.out.println("Soon enough you get surrounded by rotting monsters, but luckily you find a house.");
+            System.out.println("Turns out the house isn't as safe as you thought so. A corpse surprises you!");
+            insideHouse();
         } else {
             System.out.println("Invalid choice. Game over!");
         }
 
-        //clear();
+        clear();
         scanner.close();
+    }
+
+    public static int exploreRandom() {
+        Random rand = new Random();
+        int ran = rand.nextInt(2);
+        return ran;
     }
 
     public static void returnHome() {
         System.out.println("You come to the conclusion that an adventure is not worth the risk and return home.");
-        System.out.println();
-        System.out.println();
         System.out.println("Game over!");
-        pause();
+        System.out.println();
+        System.out.println();
         clear();
-        confir();
+        startMenu();
     }
 
     public static void insideBunker() {
@@ -124,23 +131,48 @@ public class Main {
             System.out.println("Your score: " + score);
             System.out.println("You walk down a dirt road and find an abandoned house.");
             System.out.println("After a lengthy scan, you discover that there is no threat in the house. You're safe for now.");
-            pause();
+            System.out.println(); System.out.println();
+            System.out.println("Thanks for playing!");
             clear();
-            confir();
+            startMenu();
         } else if (choice == 2) {
             System.out.println("You decide to look for supplies down there.");
             System.out.println("Unfortunately, it seems like the place was already ransacked.");
             System.out.println("A corpse jumps from a metal cabinet behind you and bites your neck.");
             System.out.println("Just like that, you perish.");
             System.out.println("Your score: " + score);
-            pause();
+            System.out.println(); System.out.println();
+            System.out.println("Thanks for playing!");
             clear();
-            confir();
+            startMenu();
         } else {
             System.out.println("Invalid choice. Game over!");
         }
 
-        //clear();
         scanner.close();
+    }
+
+    public static void insideHouse() {
+        System.out.println("1. Use your barefists. It's just a rotting corpse after all...");
+        System.out.println("2. ");
+        System.out.print("Enter Your Choice: ");
+
+        Scanner scanner = new Scanner(System.in);
+
+        int choice = scanner.nextInt();
+        System.out.println();
+
+        if (choice == 1){
+
+        }
+    }
+    public static void pause() {
+        Scanner s = new Scanner(System.in);
+        s.next();
+    }
+    public static void clear()
+    {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }
