@@ -167,7 +167,7 @@ public class Main {
                 clear();
                 restartMenu();
             } else {
-                System.out.println("You're able to momentarily overpower the creature, pushing it against to the ground.");
+                System.out.println("You're able to momentarily overpower the creature, pushing it to the ground.");
                 System.out.println("You pick up the heaviest object from the living room and drop it on the beast's head.");
                 System.out.println("You killed it! And it looks likes the house is clean. You're safe for now...");
                 score = score + 100;
